@@ -4,6 +4,14 @@ A tool similar to RunAsDate that allows you to run specific applications under a
 
 ---
 
+## 💻 Usage
+
+### GUI Usage (`TimeWarpX.exe`)
+* Works similarly to **RunAsDate**.
+* Set your desired date.
+* Browse for the target `.exe`.
+* Click **Run/Inject**.
+* **Note:** `timewarpx.exe` can be used via CMD/PowerShell or double-clicked to open the interface.
 
 ### CMD / PowerShell Usage
 `timewarp.exe` has no GUI and is ideal for automated startup scripts.
@@ -34,15 +42,18 @@ Start-Process -FilePath ".\timwarp.exe" -ArgumentList "-x64", "2024-05-11", "12:
 
 ⚠️ **Important Notes:**
 * The first target `.exe` argument must use an **absolute path** unless `timewarp.exe` is placed directly inside the target executable's directory.
+* The `TestApp` folder contains two sample calendar applications (32-bit and 64-bit) for testing purposes.
 
 ---
 
 ## 🛡️ Antivirus & False Positives
 
 * **`timewarp.exe` (No GUI):** Completely clean. Passes all Antivirus checks.
+* **`timewarpx.exe` (GUI):** Triggers approximately 19 false positives on VirusTotal. This occurs because the other standalone executables are bundled directly inside the GUI binary. 
 
 > 💡 **Tip:** If your Antivirus flags the GUI, you do not need to use it. The CLI tools provide full functionality and are completely clean.
 
 ### VirusTotal Scans
+* [VirusTotal Scan - timewarpx.exe (GUI)](https://www.virustotal.com/gui/file/fe9f27f050d086efeb62fcb99d0bf137e6b246ea2fbbe9695858fbc2fab27432)
 * [VirusTotal Scan - timewarp.exe (No GUI)](https://www.virustotal.com/gui/file/c13ba4c17736dea32c29a255b12e78854805764cd05383b146b6c48750f6d935)
 
